@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(fonts/BebasNeue/BebasNeue-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Adelia';
+    src: url(fonts/adelia_3/adelia.ttf) format('woff');
+}
+
+@font-face {
+    font-family: 'Mandala';
+    src: url(fonts/welcome_mandala/Welcome\ Mandala.otf) format(woff);
+}
+
+@font-face {
+    font-family: 'Poetsen';
+    src: url(fonts/poetsen_one/PoetsenOne-Regular.ttf) format(woff);
+}
+
+@font-face {
+    font-family: 'NotoSans Medium';
+    src: url(fonts/NotoSans/NotoSans-Medium.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'NotoSans Bold';
+    src: url(fonts/NotoSans/NotoSans-Bold.woff) format(woff);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(img/backgrounds/beach.png);
+    background-size: cover;
+    background-position: center;
+    animation: subtle 20s ease-out infinite alternate;
+}
+
+    @keyframes subtle {
+        0% {
+            background-size: 100%;
+            background-position: left;
+        }
+
+
+        100% {
+            background-size: 110%;
+            background-position: right;
+        }
+    }
+
+
+
+/* container */
+
+.container1 {
+    display: grid;
+    width: 100%;
+    /* height: 100vh; */
+   
+    grid-template-areas: 
+    'container-kiri container-kanan';
+}
+
+
+.container-kiri {
+    grid-area: container-kiri;
+    display: grid;
+    perspective: 1000px;
+    grid-template-areas: 
+    'hero'
+}
+
+    .hero {
+        grid-area: hero;
+        z-index: -1;
+        width: 65%;
+        left: 10%;
+        position: relative;
+        /* border: 2px solid red; */
+    }
+
+        .hero img {
+            max-width: 100%;
+
+        }
+    
+    .faction {
+        grid-area: hero;
+        z-index: -2;
+        top: 2%;
+        left: 2%;
+        position: relative;
+        opacity: 0.3;
+        
+    }
+
+        .faction img {
+            max-width: 100%;
+
+        }
+
+    .front-profile-container {
+        margin-top: -28%;
+        /* border: 2px solid salmon; */
+        transform: rotateY(10deg);
+    }
+    
+        .front-profile {
+            display: flex;
+            position: relative;
+            z-index: 9;
+            left: 12%;
+            width: 90%;
+            /* border: 2px solid rgb(128, 0, 100); */
+            
+        }
+
+            .job {
+                font-family: 'BebasNeue';
+                font-size: 4.5em;
+                text-shadow:
+                            -1px 1px 0 #bebebe,
+                            1px 1px 0 #bebebe;
+
+            }
+
+            .engineer-logo {
+                height: 70px;
+                width: 70px; 
+                padding-left: 15px;
+                transition: 0.3s;
+                /* border: 2px solid green; */
+            }
+            
+                .engineer-logo img {
+                    max-width: 100%;
+                    
+                }  
+
+
+                    
+
+            .nama {
+                /* border: 2px solid violet; */
+                position: relative;
+                left: 12%;
+                width: 80%;
+                line-height: 1;
+                font-family: 'NotoSans Bold';
+                font-size: 5em;
+                color: #fff;            text-shadow:
+                            -2px -2px 0 #3d3d3d,  
+                            1px -1px 0 #3d3d3d,
+                            -1px 1px 0 #3d3d3d,
+                            1px 1px 0 #3d3d3d;
+                font-variant: small-caps;
+            }
+
+
+
+
+
+.container-kanan {
+    grid-area: container-kanan;
+    display: grid;
+    perspective: 1000px;
+}
+
+    .semua-tabs {
+        display: grid;
+        grid-template-areas: 
+            'home'
+            'about'
+            'skills'
+            'projects' 
+            'contact';
+        padding-top: 10%;
+        padding-bottom: 10%;
+        gap: 10px;
+        margin-right: 25px;
+        transform: rotateY(-10deg);
+    }
+    
+        .semua-tabs a {
+            text-decoration: none;
+        }
+
+    .tabs {
+        display: flex;
+        position: relative;
+        width: 500px;
+        border: 2px solid #000;
+        justify-content: left;
+        box-shadow: 0px 1px 10px #000;
+        transition: 0.5s;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+            .tabs:hover {
+                transform: scale(1.1) translateX(-6%);
+            }
+
+
+
+        .tabs-bagian-kiri {
+            background-color: #03a6dd;
+            box-sizing: border-box;
+            width: 10%;
+            align-content: center;
+        }
+            .icon-tabs-bagian-kiri {
+                padding-left: 20%;
+            }
+
+        .tabs-bagian-kanan {
+            display: flex;
+            background-image: url(img/backgrounds/img_bless_list_bgdeco.png);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            box-shadow: 1px 1px 30px #000;
+        }
+
+            .tabs-bagian-kanan span {
+                font-family: 'NotoSans Bold';
+                color: aliceblue;
+                font-size: 3em;
+                font-variant: small-caps;
+                text-decoration: none;
+            }
+
+            .tabs-bagian-kanan .tabs-logo img {
+                height: 80px;
+            }
+    
+
+
+            
+
+    /* .home {
+        
+    } */
+
+    .about {
+        right: 6%;
+    }
+
+    /* .skills {
+        
+    } */
+
+    .projects {
+        right: 6%;
+    }
+
+    /* .contact {
+        
+    } */
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+        

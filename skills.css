@@ -108,6 +108,10 @@ body {
             font-size: 80px;
         }
 
+            .description-skills .info-skills6 span {
+                font-size: 60px;
+            }
+
         .description-skills p {
             text-align: justify;
         }
